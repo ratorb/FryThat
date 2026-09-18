@@ -10,7 +10,6 @@ using KitchenLib.Customs;
 using KitchenLib.Event;
 using KitchenLib.Utils;
 using KitchenMods;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using UnityEngine;
@@ -21,12 +20,12 @@ namespace JustWingIt
     public class Main : BaseMod
     {
         public const string GUID = "nova.justwingit";
-        public const string VERSION = "1.1.1";
+        public const string VERSION = "1.1.3";
 
         public Main() : base(GUID, "Fry That!", "Zoey Davis", VERSION, ">=1.0.0", Assembly.GetExecutingAssembly()) { }
 
         private static AssetBundle Bundle;
-
+        
         private void PreBuild()
         {
 
@@ -157,7 +156,7 @@ namespace JustWingIt
         {
             MethodInfo AddGDOMethod = typeof(BaseMod).GetMethod(nameof(BaseMod.AddGameDataObject));
             int counter = 0;
-            Log("Registering GameDataObjects.");
+            LogInfo("Registering GameDataObjects.");
             foreach (var type in Assembly.GetExecutingAssembly().GetTypes())
             {
                 if (type.IsAbstract || typeof(IWontRegister).IsAssignableFrom(type))
@@ -170,10 +169,19 @@ namespace JustWingIt
                 generic.Invoke(this, null);
                 counter++;
             }
-            Log($"Registered {counter} GameDataObjects.");
+            LogInfo($"Registered {counter} GameDataObjects.");
         }
 
         public interface IWontRegister { }
+        #endregion
+
+        #region Logging
+        internal static void LogInfo(string msg) { Debug.Log($"[{GUID}] " + msg); }
+        internal static void LogWarning(string msg) { Debug.LogWarning($"[{GUID}] " + msg); }
+        internal static void LogError(string msg) { Debug.LogError($"[{GUID}] " + msg); }
+        internal static void LogInfo(object msg) { LogInfo(msg.ToString()); }
+        internal static void LogWarning(object msg) { LogWarning(msg.ToString()); }
+        internal static void LogError(object msg) { LogError(msg.ToString()); }
         #endregion
 
         #region Utility

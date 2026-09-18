@@ -13,6 +13,9 @@
     <LangVersion>latest</LangVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+	  <AssetBundlePath>E:\PlateUp! Modding\Assets\Bundle Generation\Assets\Bundles/justwingit</AssetBundlePath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,78 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2949018507\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="ApplianceLib-Workshop">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\ApplianceLib\content\ApplianceLib-Workshop.dll</HintPath>
-    </Reference>
-    <Reference Include="Controllers">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Controllers.dll</HintPath>
-    </Reference>
-    <Reference Include="Kitchen.Common">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Kitchen.FranchiseMode">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.FranchiseMode.dll</HintPath>
-    </Reference>
-    <Reference Include="Kitchen.GameData">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.GameData.dll</HintPath>
-    </Reference>
-    <Reference Include="Kitchen.Layouts">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.Layouts.dll</HintPath>
-    </Reference>
-    <Reference Include="Kitchen.RestaurantMode">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Kitchen.RestaurantMode.dll</HintPath>
-    </Reference>
-    <Reference Include="KitchenLib-Workshop">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\workshop\content\1599600\2898069883\KitchenLib-Workshop.dll</HintPath>
-    </Reference>
-    <Reference Include="KitchenMode">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\KitchenMode.dll</HintPath>
-    </Reference>
-    <Reference Include="KitchenMods">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\KitchenMods.dll</HintPath>
-    </Reference>
-    <Reference Include="MessagePack">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\MessagePack.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Unity.Entities">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Entities.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Jobs">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Jobs.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Serialization">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\Unity.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIModule">
-      <HintPath>..\..\..\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\PlateUp_Data\Managed\UnityEngine.UIModule.dll</HintPath>
-    </Reference>
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="CheeseCurds\CheeseCurds.cs" />
     <Compile Include="CheeseCurds\BurnedCurdPot.cs" />
@@ -146,18 +77,31 @@
     <Compile Include="Wings\WingsDish.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IngredientLib\IngredientLib.csproj">
-      <Project>{273e222c-4939-447c-9fcd-3fae7445a797}</Project>
-      <Name>IngredientLib</Name>
-    </ProjectReference>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Just Wing It!\content" /y
-copy "C:\PlateUp\Assets\Bundle Generation\Assets\Bundles\justwingit" "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Just Wing It!\content" /y
-cd "C:\Program Files (x86)\Steam\steamapps\common\PlateUp\PlateUp\Mods\Just Wing It!\content"
-del "justwingit.assets"
-ren "justwingit" "justwingit.assets"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
+  <Import Project="..\packages\Yariazen.PlateUp.ModBuildUtilities.1.13.0\build\Yariazen.PlateUp.ModBuildUtilities.targets" Condition="Exists('..\packages\Yariazen.PlateUp.ModBuildUtilities.1.13.0\build\Yariazen.PlateUp.ModBuildUtilities.targets')" />
+  <!-- Exclude this mod's own previously-published Workshop copy from auto-references, to prevent CS0121 ambiguous-call errors against local source (see learnings.md: "Workshop self-reference pattern"). -->
+  <Target Name="T_ReferenceLibraries" AfterTargets="T_BlacklistReferences">
+    <ItemGroup Condition="$(AssemblyReferencePath) != '' AND $(EnableAutoGameReferences) == 'true'">
+      <Reference Include="$(AssemblyReferencePath)\*.dll" Exclude="@(Blacklist)" />
+    </ItemGroup>
+    <ItemGroup Condition="$(WorkshopPath) != '' AND $(EnableAutoWorkshopReferences) == 'true'">
+      <Reference Include="$(WorkshopPath)\**\*.dll" Exclude="$(WorkshopPath)\**\$(AssemblyName).dll" />
+    </ItemGroup>
+    <ItemGroup Condition="$(ModsPath) != '' AND $(EnableAutoLocalModsReferences) == 'true'">
+      <Reference Include="$(ModsPath)\**\content\*.dll" Exclude="$(ModsPath)\$(MSBuildProjectName)\**\content\*.dll" />
+    </ItemGroup>
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Yariazen.PlateUp.ModBuildUtilities.1.13.0\build\Yariazen.PlateUp.ModBuildUtilities.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Yariazen.PlateUp.ModBuildUtilities.1.13.0\build\Yariazen.PlateUp.ModBuildUtilities.targets'))" />
+  </Target>
 </Project>
